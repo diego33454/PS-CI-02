@@ -8,7 +8,7 @@ describe("Tests BD", () => {
      var sql = "DROP TABLE IF EXISTS personas; CREATE TABLE personas
 (name VARCHAR(255), surname VARCHAR(255));" +
                 "INSERT INTO personas(name, surname) VALUES ('Amanda',
-'Atkinson');"
+'Atkinson');";
    app.con.query(sql, (err, result) => {
      if (err) throw err;
    })
