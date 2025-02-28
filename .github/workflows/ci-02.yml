@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14.x'
-      -name: Ejecutar compose para tener mySQL
-       run: docker compose up -d
-      -name: Instalar dependencias
-       run: npm install
-      -name: Ejecutar test      
-       run: npm test
+      - name: Ejecutar compose para tener mySQL
+        run: docker compose up -d
+      - name: Instalar dependencias
+        run: npm install
+      - name: Ejecutar test      
+        run: npm test
