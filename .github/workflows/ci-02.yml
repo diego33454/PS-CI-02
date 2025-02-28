@@ -4,11 +4,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '14.x'
-      - run: npm install
-      - run: npm test
+      -name: Ejecutar compose para tener mySQL
+       run: docker compose up -d
+      -name: Instalar dependencias
+       run: npm install
+      -name: Ejecutar test      
+       run: npm test
