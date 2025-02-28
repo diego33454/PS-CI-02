@@ -5,7 +5,7 @@ const mysql = require('mysql')
 const request = supertest(app)
 describe("Tests BD", () => {
   beforeAll(() => {
-     var sql ="DROP TABLE IF EXISTS personas; CREATE TABLE personas
+     var sql = "DROP TABLE IF EXISTS personas; CREATE TABLE personas
 (name VARCHAR(255), surname VARCHAR(255));" +
                 "INSERT INTO personas(name, surname) VALUES ('Amanda',
 'Atkinson');"
